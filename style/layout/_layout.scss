@@ -1,0 +1,219 @@
+/*****HEADER*****/
+
+header{
+	padding: 5px;
+	@include flex-row-centered;
+	@include shade;
+	@include desktop-style{		
+		@include padding-20;
+	}
+		#home{
+			-ms-flex-item-align: center;
+			-ms-grid-row-align: center;
+			align-self: center;
+			font-size: 130%;
+			padding: 10px 0px 5px 0px;
+			@include lighter-hover-transition;
+				&:hover{
+					color: $primary-color;
+			 	}
+		}
+		.logo{
+			margin-left: 50px;
+			margin-right: 60px;
+			width: 50%;
+			max-width: 350px;
+			padding: 10px 0px 5px 0px;
+		}
+}
+
+/*****FOOTER*****/
+
+footer{
+	color: white;
+	background-color: #3E3E3E;
+	padding: 10px 20px 30px 20px;
+	line-height: 170%;
+	height: auto;
+	@include flex-column;
+		@include desktop-style{
+			@include just-flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+		}
+		h1, h2{
+			font-family: Shrikhand, arial;
+			font-size: 120%;
+			letter-spacing: 0.5px;
+			font-weight: lighter;
+		}
+		a{
+			color: white;
+			@include just-flex;
+			margin: 0px;	
+			@include lighter-hover-transition;
+		}
+		p{
+			color: white;
+			@include just-flex;
+			margin: 0px;
+			@include lighter-hover-transition;
+		}
+		.utensils, .hands{
+			font-size: 90%;
+			margin-right: 12px;
+			-ms-flex-item-align: center;
+			-ms-grid-row-align: center;
+			align-self: center;
+		}
+		.hands{
+			font-size: 70%;
+		}
+		.logo{
+			max-height: 100px;
+		}
+}
+
+.restaurant-header{
+	@include flex-column;
+	margin-bottom: 0px;
+		.restaurant-pic{
+			@include background-menu-style;
+				@include desktop-style{
+					height: 300px;
+					@include background-menu-desktop;
+				}
+		}
+		.pic-footer{
+			@include pic-footer-style;
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+				@include desktop-style{
+					padding:30px;		
+						h1{
+							margin: 0px 10px 0px 0px;
+						}
+				}
+				.heart{
+					@include icon-heart-style;
+						@include desktop-style{
+							text-align: right;
+						}
+					}
+		}
+}
+
+.menu-content{
+	@include padding-20;
+	@include flex-column;
+		@include desktop-style{
+			padding:30px;	
+				a{
+					width: 700px;
+					-ms-flex-item-align: center;
+				  -ms-grid-row-align: center;
+				  align-self: center;
+				}			
+		}	
+		h1{
+			margin-top: 20px;
+			text-transform: uppercase;
+			font-weight: lighter;
+			color: #4F4E4E;	
+			font-size: 120%;			
+				&:after{
+					content: "";
+					display: block;
+					width: 47px;
+					height: 5px;
+					border-bottom: 3px solid $tertiary-color;
+				}		
+		}	
+
+}
+
+.a-choice{
+	border-radius: 15px;
+	max-height: 60px;
+	max-width: 700px;
+	margin-top: 20px;
+		.tick{
+			color: white;
+			font-size: 120%;
+			@include flex-row-centered;
+			@include hover-tick-transition;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+		 	align-items: center;
+			background-color: white;	
+			border-radius: 0px 15px 15px 0px;
+				.tick-icon{
+					-webkit-transition: -webkit-transform 0.5s;
+					transition: -webkit-transform 0.5s;
+					-o-transition: transform 0.5s;
+					transition: transform 0.5s;
+					transition: transform 0.5s, -webkit-transform 0.5s;
+				}
+		}
+		&:hover{
+			.title, .description{
+				max-width: 200px;
+				@include desktop-style{
+					max-width: 100%;
+				}
+			}
+				.tick{
+					color: black;
+				max-width: 65px;
+				background-color: $primary-color;	
+				-webkit-box-flex: 1;	
+				-ms-flex: 1;	
+				flex: 1;
+					.tick-icon{
+						-webkit-transform: rotate(360deg);
+						-ms-transform: rotate(360deg);
+						transform: rotate(360deg);		 	
+		 			}		
+				@include desktop-style{
+					-webkit-box-flex: 0.4;
+			  	-ms-flex: 0.4;
+			  	flex: 0.4;
+			  }			
+			}	
+		}
+}
+
+.choice{
+	border-radius: 15px;
+	max-height: 60px;
+	max-width: 700px;
+	background-color: white;
+	@include just-flex;
+	@include shade;
+		&:hover{
+			-webkit-box-shadow: 0px 6px 11px grey;
+			box-shadow: 0px 6px 11px grey;
+		}
+		.wrapper{
+			-webkit-box-flex:4;
+			-ms-flex:4;
+			flex:4;
+			border-radius: 15px 0px 0px 15px;
+			padding: 0px 05px 0px 10px;
+			@include flex-column;
+		}
+		.title{
+			margin: 10px 0px 0px 0px;
+			@include just-flex;
+			@include text-wrapping;		
+		}		
+}	
+
+
+

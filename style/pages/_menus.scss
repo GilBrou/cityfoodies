@@ -1,0 +1,86 @@
+
+body{
+	background-color: $background-grey;
+}
+
+header{
+	@include menu-header-pages;
+}
+
+.a-choice{
+		position: relative;
+	  top: 45px;
+	  overflow: hidden;   
+	  opacity: 0;
+	  -webkit-animation: fadein 1s cubic-bezier(0, 0, 0, 1) forwards;
+	  animation: fadein 1s cubic-bezier(0, 0, 0, 1) forwards;
+	 }
+	 .choice-1{
+	 		-webkit-animation-delay: 0.2s;
+	  	animation-delay: 0.2s;
+		}
+		.choice-2{
+			-webkit-animation-delay: 0.4s;
+	    animation-delay: 0.4s;
+		}
+		.choice-3{
+			-webkit-animation-delay: 0.6s;
+	    animation-delay: 0.6s;
+	  }
+		.choice-4{
+			-webkit-animation-delay: 0.8s;
+	    animation-delay: 0.8s;
+	  }
+		.choice-5{
+			-webkit-animation-delay: 1s;
+	    animation-delay: 1s;
+		}
+		.choice-6{
+			-webkit-animation-delay: 1.2s;
+	    animation-delay: 1.2s;
+		}
+		.choice-7{
+			-webkit-animation-delay: 1.4s;
+	    animation-delay: 1.4s;
+		}
+		.choice-8{
+			-webkit-animation-delay: 1.6s;
+	    animation-delay: 1.6s;
+		}
+		.choice-9{
+			-webkit-animation-delay: 1.8s;
+	    animation-delay: 1.8s;
+		}
+		.choice-10{
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+
+@-webkit-keyframes fadein{
+	from{
+  	opacity: 0;
+  }
+  to{
+  	-webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+  to{
+  	-webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    opacity: 1;
+  }
+}
+
+.a-button{
+	margin-top: 40px;
+		.gradient-button{
+			margin: 0px 20px 0px 20px;
+		}
+}

@@ -1,0 +1,35 @@
+/*****GENERAL*****/
+
+body{
+	max-width: 1440px;
+	min-width: 350px;
+	margin: auto;
+	background-color: white ;
+	font-family: Roboto, arial;
+	padding: 5px 0px 0px 0px;
+}
+
+section{
+	@include padding-20;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+footer a:hover, footer p:hover{
+	color: $primary-color;
+}
+
+nav{
+	@include just-flex;
+}
+
+	h1, h2{
+		font-size: 155%;
+	}
+
+.sub-header, .step, .restaurants{
+	background-color: $background-grey;
+}

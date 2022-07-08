@@ -1,0 +1,85 @@
+/*****SUB-HEADER*****/
+
+.a-button {
+	@include flex-row-centered;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	margin-bottom: 40px;
+	max-width: 350px;
+	min-width: 250px;
+	@include desktop-style {
+		margin-bottom: 10px;
+		width: 400px;
+	}
+	.gradient-button {
+		width: 100%;
+		font-size: 110%;
+		color: black;
+		padding: 18px 5px 18px 5px;
+		border-radius: 55px;
+		border: none;
+		background: -o-linear-gradient($secondary-color, $primary-color);
+		background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from($secondary-color),
+			to($primary-color)
+		);
+		background: linear-gradient($secondary-color, $primary-color);
+		margin-top: 12px;
+		@include self-text-align;
+		@include shade;
+		-webkit-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		transition: all 0.25s;
+		&:hover {
+			@include lighter-hover;
+		}
+	}
+}
+.palette {
+	background-image: url(../ressources/Photos/restaurant-palette.jpg);
+}
+
+.note {
+	background-image: url(../ressources/Photos/restaurant-note.jpg);
+}
+
+.française {
+	background-image: url(../ressources/Photos/restaurant-française.jpg);
+}
+
+.sens {
+	background-image: url(../ressources/Photos/restaurant-sens.jpg);
+}
+
+.details {
+	@include just-flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	font-size: 90%;
+	.description {
+		color: $lighter-text-color;
+		margin-bottom: 10px;
+		-webkit-box-flex: 3;
+		-ms-flex: 3;
+		flex: 3;
+		max-height: 17px;
+		@include just-flex;
+		@include text-wrapping;
+	}
+	p {
+		margin: 0px;
+		font-weight: lighter;
+	}
+	& strong {
+		margin-left: 15px;
+		width: 10%;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+}
